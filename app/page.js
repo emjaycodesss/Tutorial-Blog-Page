@@ -31,18 +31,13 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Navigation */}
-      <nav className="max-w-6xl mx-auto border-b-2 border-black py-2 mb-8 sticky top-0 bg-[#f9f7f1] z-50">
-        <div className="flex flex-wrap justify-center gap-4 md:gap-10 font-sans font-bold uppercase text-[10px] md:text-xs tracking-[0.2em]">
-          <a href="#intro" className="hover:bg-black hover:text-white px-2 transition">The Lead</a>
-          <a href="#box-model" className="hover:bg-black hover:text-white px-2 transition">Box Model</a>
-          <a href="#responsive" className="hover:bg-black hover:text-white px-2 transition">Responsiveness</a>
-          <a href="#colors" className="hover:bg-black hover:text-white px-2 transition">Colors</a>
-          <a href="#typography" className="hover:bg-black hover:text-white px-2 transition">Typography</a>
-          <a href="#layouts" className="hover:bg-black hover:text-white px-2 transition">Layouts</a>
-          <a href="#utilities" className="hover:bg-black hover:text-white px-2 transition">States</a>
-          <a href="#forms" className="hover:bg-black hover:text-white px-2 transition">Forms</a>
-          <a href="#filters" className="hover:bg-black hover:text-white px-2 transition">Effects</a>
+      {/* Concise Navigation */}
+      <nav className="max-w-6xl mx-auto border-b-2 border-black py-2 mb-8 sticky top-0 bg-[#f9f7f1]/95 backdrop-blur-sm z-50">
+        <div className="flex justify-center gap-8 md:gap-16 font-sans font-black uppercase text-[11px] md:text-xs tracking-[0.3em]">
+          <a href="#intro" className="hover:line-through transition">Front Page</a>
+          <a href="#box-model" className="hover:line-through transition">Foundations</a>
+          <a href="#responsive" className="hover:line-through transition">Architecture</a>
+          <a href="#forms" className="hover:line-through transition">Interface</a>
         </div>
       </nav>
 
@@ -166,13 +161,13 @@ export default function Home() {
           </section>
         </div>
 
-        {/* --- THE TYPOGRAPHIC SCALE --- */}
+         {/* --- THE TYPOGRAPHIC SCALE --- */}
         <section id="typography-sizing" className="border-y-2 border-black py-12 mb-12">
           <h3 className="text-3xl font-black uppercase mb-8 text-center tracking-[0.2em]">The Typographic Specimen</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <p className="text-xs uppercase font-sans font-bold text-stone-500 mb-4 border-b border-stone-300">Scale Analysis</p>
-              <div className="space-y-6">
+              <div className="space-y-6 font-serif">
                 <div>
                   <span className="text-[10px] font-mono text-stone-400 italic block">text-6xl</span>
                   <h2 className="text-6xl font-black leading-none">Broadsheet</h2>
@@ -183,26 +178,26 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-[10px] font-mono text-stone-400 italic block">text-2xl</span>
-                  <h4 className="text-2xl font-semibold">Sub-heading editorial style</h4>
+                  <h4 className="text-2xl font-semibold italic underline">Sub-heading editorial style</h4>
                 </div>
                 <div>
                   <span className="text-[10px] font-mono text-stone-400 italic block">text-base</span>
-                  <p className="text-base leading-relaxed">Standard body copy. This represents the foundation of readability in our newspaper layout, utilizing the default 16px size.</p>
+                  <p className="text-base leading-relaxed text-justify font-sans">Standard body copy. This represents the foundation of readability in our newspaper layout, utilizing the default 16px size.</p>
                 </div>
               </div>
             </div>
             <div className="bg-white p-8 border border-stone-300 shadow-inner">
               <p className="text-xs uppercase font-sans font-bold text-stone-500 mb-6 border-b border-stone-300">Leading & Tracking</p>
-              <div className="space-y-8">
-                <p className="leading-loose text-sm italic">
-                  <strong>leading-loose:</strong> This paragraph demonstrates increased line height, often used for artistic pull-quotes or legal disclaimers to improve white space.
+              <div className="space-y-8 font-serif">
+                <p className="leading-loose text-sm italic border-l border-black pl-4">
+                  <strong>leading-loose:</strong> This paragraph demonstrates increased line height, often used for artistic pull-quotes or legal disclaimers.
                 </p>
-                <p className="tracking-[0.5em] uppercase text-xs font-black text-center">
+                <p className="tracking-[0.5em] uppercase text-xs font-black text-center border border-black p-2 bg-stone-50">
                   tracking-widest: Letter Spacing
                 </p>
                 <div className="border-t-2 border-black pt-4">
                   <p className="text-7xl font-black tracking-tighter text-center">TIGHT</p>
-                  <p className="text-[10px] text-center font-sans uppercase font-bold tracking-widest mt-1">tracking-tighter</p>
+                  <p className="text-[10px] text-center font-sans uppercase font-bold tracking-widest mt-1 underline">tracking-tighter</p>
                 </div>
               </div>
             </div>
@@ -265,46 +260,122 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FORMS & INPUTS (THE PUBLIC NOTICE) */}
+{/* FORMS & INPUTS */}
         <section id="forms" className="mb-16 border-t-2 border-black pt-8">
              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-stone-200 p-8 border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                 <div>
-                    <h3 className="text-2xl font-black uppercase mb-4 underline">Public Notices</h3>
-                    <p className="text-sm italic mb-6">"All styling for inputs is handled via focus rings and outline offsets."</p>
+                    <h3 className="text-2xl font-black uppercase mb-4 underline italic tracking-tight">Public Notices</h3>
+                    <p className="text-xs font-bold uppercase mb-6 tracking-widest text-stone-600 border-b border-stone-300 pb-1">Input Styling Laboratory</p>
                     <div className="space-y-4 font-sans">
                         <div>
-                            <label className="block text-xs font-bold uppercase mb-1">Electronic Mail</label>
-                            <input type="text" placeholder="user@domain.com" className="w-full bg-white border border-black p-2 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:italic" />
+                            <label className="block text-xs font-black uppercase mb-1 tracking-tighter">Electronic Mail</label>
+                            <input type="text" placeholder="user@domain.com" className="w-full bg-white border border-black p-2 text-sm focus:ring-2 focus:ring-black outline-none transition-all placeholder:italic cursor-text" />
                         </div>
                         <div>
-                            <label className="block text-xs font-bold uppercase mb-1">Subscriber Message</label>
-                            <textarea placeholder="Type your inquiry..." className="w-full bg-white border border-black p-2 text-sm h-24 focus:ring-2 focus:ring-black outline-none transition-all"></textarea>
+                            <label className="block text-xs font-black uppercase mb-1 tracking-tighter">Subscriber Message</label>
+                            <textarea placeholder="Type your inquiry..." className="w-full bg-white border border-black p-2 text-sm h-24 focus:ring-2 focus:ring-black outline-none transition-all cursor-text"></textarea>
                         </div>
                     </div>
                 </div>
                 <div className="flex flex-col justify-center items-center text-center space-y-4">
-                    <div className="p-4 border-2 border-dashed border-black">
-                        <p className="font-bold text-xl uppercase mb-2">Checkboxes & Radios</p>
-                        <div className="flex gap-4 font-sans text-xs font-bold">
-                            <label className="flex items-center gap-2 cursor-pointer">
-                                <input type="checkbox" className="accent-black w-4 h-4" /> Option A
+                    <div className="p-4 border-2 border-dashed border-black bg-white/50 w-full">
+                        <p className="font-black text-lg uppercase mb-2 tracking-widest underline">Controls</p>
+                        <div className="flex flex-col gap-2 font-sans text-xs font-bold uppercase tracking-widest italic">
+                            <label className="flex items-center gap-2 cursor-pointer hover:underline decoration-black">
+                                <input type="checkbox" className="accent-black w-4 h-4 cursor-pointer" /> Terms of Dispatch
                             </label>
-                            <label className="flex items-center gap-2 cursor-pointer">
-                                <input type="radio" name="r" className="accent-black w-4 h-4" /> Option B
+                            <label className="flex items-center gap-2 cursor-pointer hover:underline decoration-black">
+                                <input type="radio" name="r" className="accent-black w-4 h-4 cursor-pointer" /> Priority Mail
                             </label>
                         </div>
                     </div>
-                    <button className="w-full bg-black text-white py-3 font-black uppercase tracking-widest hover:invert transition-all active:scale-95">
+                    <button className="w-full bg-black text-white py-4 font-black uppercase tracking-[0.4em] hover:bg-stone-800 transition-all active:scale-95 cursor-pointer shadow-lg">
                         Submit Dispatch
                     </button>
                 </div>
              </div>
         </section>
 
+        {/* --- THE BUTTON REPOSITORY --- */}
+        <section id="button-types" className="mb-16 border-y-2 border-stone-300 py-12 bg-stone-50/50">
+          <h3 className="text-3xl font-black uppercase mb-8 border-b-4 border-black inline-block tracking-tight">The Button Repository</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Toggle Switch Types */}
+            <div className="space-y-6">
+              <h4 className="font-sans font-black uppercase text-[10px] tracking-widest bg-black text-white px-2 py-1 inline-block">Toggle & Switch</h4>
+              <div className="space-y-4 bg-white p-6 border border-black shadow-sm">
+                
+                {/* Standard Switch */}
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold italic">Standard Switch</span>
+                  <label className="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" className="sr-only peer" />
+                    <div className="w-11 h-6 bg-stone-300 rounded-full peer peer-checked:bg-stone-900 transition-colors duration-300 after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"></div>
+                  </label>
+                </div>
+
+                {/* Outline Toggle */}
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold italic">Outline Toggle</span>
+                  <label className="flex items-center cursor-pointer group">
+                    <input type="checkbox" className="sr-only peer" />
+                    {/* The Track */}
+                    <div className="w-12 h-6 border-2 border-black rounded-full flex items-center px-1 peer-checked:bg-black transition-all duration-300">
+                      {/* The Dot */}
+                      <div className="w-3 h-3 bg-black rounded-full transition-all duration-300 peer-checked:translate-x-6 peer-checked:bg-white"></div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            {/* State Buttons */}
+            <div className="space-y-6">
+              <h4 className="font-sans font-black uppercase text-[10px] tracking-widest bg-black text-white px-2 py-1 inline-block">Stateful Controls</h4>
+              <div className="space-y-4">
+                {/* Processing Button */}
+                <button className="w-full inline-flex items-center justify-center px-4 py-3 font-black text-[10px] uppercase bg-black text-white cursor-wait opacity-70 group">
+                  <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Processing...
+                </button>
+                {/* 3D Button */}
+                <button className="w-full bg-white border-2 border-black px-4 py-3 font-black text-[10px] uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all cursor-pointer hover:bg-stone-50">
+                  3D Push Button
+                </button>
+              </div>
+            </div>
+
+            {/* Icon & Group Buttons */}
+            <div className="space-y-6">
+              <h4 className="font-sans font-black uppercase text-[10px] tracking-widest bg-black text-white px-2 py-1 inline-block">Selection Groups</h4>
+              <div className="flex flex-col gap-4">
+                {/* Grouped Buttons */}
+                <div className="inline-flex rounded-md shadow-sm w-full" role="group">
+                  <button className="flex-1 px-4 py-3 text-[10px] font-black uppercase bg-white border-2 border-black hover:bg-stone-900 hover:text-white transition-colors cursor-pointer">L</button>
+                  <button className="flex-1 px-4 py-3 text-[10px] font-black uppercase bg-white border-y-2 border-r-2 border-black hover:bg-stone-900 hover:text-white transition-colors cursor-pointer">C</button>
+                  <button className="flex-1 px-4 py-3 text-[10px] font-black uppercase bg-white border-y-2 border-r-2 border-black hover:bg-stone-900 hover:text-white transition-colors cursor-pointer">R</button>
+                </div>
+                {/* Slide Reveal Button */}
+                <button className="group relative flex items-center justify-center w-full bg-stone-900 text-white p-3 overflow-hidden cursor-pointer">
+                  <span className="absolute left-0 w-0 h-full bg-red-700 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="relative z-10 flex items-center gap-2 font-black uppercase text-[10px] tracking-widest">
+                    Slide Reveal <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"></path></svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
         {/* FILTERS & EFFECTS (THE ART GALLERY) */}
         <section id="filters" className="mb-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-1 border-4 border-double border-black p-4 text-center">
-                <h4 className="font-black uppercase mb-4">Blur & Shadow</h4>
+                <h4 className="font-black uppercase mb-4 text-sm tracking-tighter">Blur & Shadow</h4>
                 <div className="relative group cursor-none">
                     <div className="w-full h-32 bg-stone-400 group-hover:blur-sm transition-all duration-700"></div>
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 font-black uppercase text-xl transition-all">
@@ -314,12 +385,12 @@ export default function Home() {
                 <p className="text-[10px] mt-2 italic">filter: blur-[n]</p>
             </div>
             <div className="md:col-span-1 border-4 border-double border-black p-4 text-center">
-                <h4 className="font-black uppercase mb-4">Grayscale</h4>
+                <h4 className="font-black uppercase mb-4 text-sm tracking-tighter">Grayscale</h4>
                 <div className="w-full h-32 bg-red-600 grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"></div>
                 <p className="text-[10px] mt-2 italic">filter: grayscale-[n]</p>
             </div>
             <div className="md:col-span-1 border-4 border-double border-black p-4 text-center">
-                <h4 className="font-black uppercase mb-4">Opacity & Skew</h4>
+                <h4 className="font-black uppercase mb-4 text-sm tracking-tighter">Opacity & Skew</h4>
                 <div className="w-full h-32 bg-black opacity-30 hover:opacity-100 hover:skew-x-6 transition-all duration-300"></div>
                 <p className="text-[10px] mt-2 italic">transform: skew-x-[n]</p>
             </div>
@@ -368,7 +439,7 @@ export default function Home() {
           <div className="text-right">
             <h5 className="font-black uppercase text-xs border-b border-black mb-3 pb-1">Edition Info</h5>
             <p className="text-[10px] uppercase font-bold tracking-widest">{todayDate}</p>
-            <p className="text-[10px] text-stone-500 italic mt-1 font-sans">Full Comprehensive Guide - Page 01</p>
+            <p className="text-[10px] text-stone-500 italic mt-1 font-sans">Tailwind CSS Guide</p>
             <p className="text-[10px] text-stone-500 uppercase mt-1 font-sans font-black tracking-widest">Davao City, PH</p>
           </div>
         </div>
